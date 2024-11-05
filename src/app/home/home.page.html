@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <app-company-name [companyName]="'NailClick'"></app-company-name>
+    <ion-buttons slot="end">
+        <ion-menu-button menu="mainMenu"></ion-menu-button>
+   </ion-buttons>  
+  </ion-toolbar> 
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-card class="custom-card">
+    <ion-card-header class="custom-card-header">
+      <ion-card-title>{{bienvenidos}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="custom-card-content">
+      <div id="user">
+        <p>Usuario: {{ email }}</p> 
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list class="custom-list">
+     <!-- Título de la lista -->
+     <ion-list-header class="custom-list-header">
+      <ion-label>Productos disponibles</ion-label>
+    </ion-list-header>
+    <!-- Recorre el array de productos para mostrar cada drone en la lista -->
+    <ion-item *ngFor="let producto of productos" (click)="mostrarAlerta(producto)" class="custom-list-item">
+      <ion-label>
+        <h2>{{ producto.nombre }}</h2>
+        <p>Precio: ${{ producto.precio }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

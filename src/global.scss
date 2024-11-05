@@ -35,3 +35,43 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* estilos globales*/ 
+
+ion-app, ion-content {
+    --background: radial-gradient(circle, #FBFBFB 0%, rgb(250, 219, 248)   100%);
+    background-color: radial-gradient(circle, #FBFBFB 0%, cornflowerblue   100%);
+  }
+
+  ion-header {
+    --background: transparent; /* Fondo transparente */
+    --ion-toolbar-background: transparent; /* Fondo transparente para la toolbar */
+    --ion-toolbar-border-color: transparent; /* Elimina el borde */
+  }
+
+  ion-header,
+  ion-toolbar,
+  ion-buttons,
+  app-company-name {
+    color: rgb(0, 0, 0); /* Ajusta el color del texto o íconos a darkblue */
+  }
+
+ ion-header,
+ ion-toolbar {
+  --ion-toolbar-border-color: transparent; /* Quita el borde */
+  --background: transparent;               /* Hace transparente la barra */ 
+ }
+
+.header-md{
+  -webkit-box-shadow: none !important; /* Elimina la sombra */
+  box-shadow: none !important; /* Elimina la sombra */
+}
+
+ion-item {
+  --background: rgb(0, 0, 0);
+}
+
+ion-button{
+  --color: red;
+}
